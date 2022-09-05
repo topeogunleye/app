@@ -5,5 +5,7 @@
   
   <strong> <%= article.title %> </strong>
   <p> <%= article.content %> </p>
+<%= link_to "show", article_path(article.id)%>
 <%end%>
 </ul>
+<%= link_to "New", articles_new_path %>
