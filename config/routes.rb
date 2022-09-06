@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'articles#index'
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   # delete 'articles/:id', to: 'articles#destroy'
   # patch 'articles/:id', to: 'articles#update'
   # get 'articles/:id/edit', to: 'articles#edit'
