@@ -1,2 +1,8 @@
 <%= render "article", article: @article%>
+
 <%= link_to "Homepage", root_path%>
+<h2> New Comment </h2>
+<%= form_with model: [ @article, @article.comments.build] do |f| %>
+<%= f.text_area :body %>
+<%= f.submit %>
+<% end %>
