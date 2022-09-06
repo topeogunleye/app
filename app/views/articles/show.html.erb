@@ -6,3 +6,7 @@
 <%= f.text_area :body %>
 <%= f.submit %>
 <% end %>
+<h2> Comments </h2>
+<% @article.comments.each do |comment| %>
+<p> <%= comment.body %>
+<% end %>
